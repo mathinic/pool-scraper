@@ -1,0 +1,11 @@
+name: pool-scraper
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - beautifulsoup4
+  - requests
+  - websockets
+  - matplotlib
+  - pandas
+prefix: /home/nimath/miniconda3/envs/pool-scraper
