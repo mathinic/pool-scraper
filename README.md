@@ -11,7 +11,7 @@ This project scrapes the number of current guests at three swimming pools in Zur
 ![Hallenbad City Guest Count](data/hallenbad_city_visualization.png)
 
 ### [Hallenbad Bläsi](https://www.stadt-zuerich.ch/de/stadtleben/sport-und-erholung/sport-und-badeanlagen/hallenbaeder/blaesi.html)
-![Hallenbad Bläsi Guest Count](data/hallenbad_bläsi_visualization.png)
+![Hallenbad Bläsi Guest Count](data/hallenbad_blaesi_visualization.png)
 
 The charts above show the number of guests at each pool over the past 7 days. Data is updated every 5 minutes.
 
