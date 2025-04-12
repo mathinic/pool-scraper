@@ -13,11 +13,11 @@ This project scrapes the number of current guests at three swimming pools in Zur
 ### [Hallenbad Bläsi](https://www.stadt-zuerich.ch/de/stadtleben/sport-und-erholung/sport-und-badeanlagen/hallenbaeder/blaesi.html)
 ![Hallenbad Bläsi Guest Count](data/hallenbad_blaesi_visualization.png)
 
-The charts above show the number of guests at each pool over the past 7 days. Data is updated every 5 minutes.
+The charts above show the number of guests at each pool over the past 7 days. Data is updated every 10 minutes.
 
 ## Features
 
-- Scrapes the current guest count of multiple pools every 5 minutes
+- Scrapes the current guest count of multiple pools every 10 minutes
 - Saves data to separate CSV files with timestamps
 - Generates visualizations of guest counts over time
 - Can be run locally or via GitHub Actions
@@ -60,7 +60,7 @@ python pool_scraper.py --visualize-only
 ### GitHub Actions Setup
 
 The repository includes a GitHub Actions workflow that:
-- Runs every 5 minutes using Conda (when schedule is enabled)
+- Runs every 10 minutes using Conda (when schedule is enabled)
 - Scrapes the data for all pools
 - Generates visualizations
 - Commits and pushes any changes to the repository

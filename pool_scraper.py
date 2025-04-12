@@ -4,7 +4,7 @@ import json
 import csv
 import os
 import time
-from datetime import datetime, timedelta
+from datetime import datetime, timezone, timedelta
 import logging
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -60,7 +60,9 @@ async def scrape_guest_counts_async():
                                 results[pool_name] = count
                                 
                                 # Get current timestamp
-                                timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                                zurich_tz = timezone(timedelta(hours=2))  # CET/CEST is UTC+2
+
+                                timestamp = datetime.now(zurich_tz).strftime('%Y-%m-%d %H:%M:%S')
                                 
                                 # Prepare CSV file path for this pool
                                 pool_filename = pool_name.lower().replace(' ', '_')
@@ -182,7 +184,7 @@ def generate_all_visualizations():
         generate_visualization(pool_name)
 
 # Main function with interval parameter for flexibility
-def main(interval_minutes=5, run_once=False):
+def main(interval_minutes=10, run_once=False):
     logging.info("Starting pool guest count scraper for multiple pools...")
     
     # Run immediately first time
@@ -209,7 +211,7 @@ if __name__ == "__main__":
     import argparse
     
     parser = argparse.ArgumentParser(description='Scrape pool guest count data for multiple pools')
-    parser.add_argument('--interval', type=int, default=5, help='Interval in minutes between scrapes')
+    parser.add_argument('--interval', type=int, default=10, help='Interval in minutes between scrapes')
     parser.add_argument('--once', action='store_true', help='Run only once and exit')
     parser.add_argument('--visualize-only', action='store_true', help='Only generate visualizations from existing data')
     
