@@ -1,0 +1,24 @@
+- valid_from: '2025-04-01'
+  valid_until: null  # Current schedule (no end date)
+  schedule:
+    Monday:
+      - open: '06:00'
+        close: '22:00'
+    Tuesday:
+      - open: '06:00'
+        close: '22:00'
+    Wednesday:
+      - open: '06:00'
+        close: '22:00'
+    Thursday:
+      - open: '06:00'
+        close: '22:00'
+    Friday:
+      - open: '06:00'
+        close: '22:00'
+    Saturday:
+      - open: '06:00'
+        close: '22:00'
+    Sunday:
+      - open: '06:00'
+        close: '22:00'
