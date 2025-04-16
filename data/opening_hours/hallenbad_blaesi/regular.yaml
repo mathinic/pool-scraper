@@ -23,7 +23,7 @@
       - open: '09:00'
         close: '18:00'
 
-- valid_from: '2025-05-01
+- valid_from: '2025-05-01'
   valid_until: '2025-09-30'
   schedule:
     Monday:

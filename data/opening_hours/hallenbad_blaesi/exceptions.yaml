@@ -1,0 +1,184 @@
+- type: date_range
+  start_date: '2025-04-18'
+  end_date: '2025-04-21'
+  schedule:
+    - open: '09:00'
+      close: '18:00'
+  reason: 'Ostern'
+
+  # Single day exceptions
+- type: single_day
+  date: '2025-04-22'
+  schedule:
+    - open: '09:00'
+      close: '20:00'
+  reason: 'Osterferien'
+
+  # Single day exceptions
+- type: single_day
+  date: '2025-04-23'
+  schedule:
+    - open: '09:00'
+      close: '19:00'
+  reason: 'Osterferien'
+
+    # Single day exceptions
+- type: single_day
+  date: '2025-04-24'
+  schedule:
+    - open: '09:00'
+      close: '22:00'
+  reason: 'Osterferien'
+
+    # Single day exceptions
+- type: single_day
+  date: '2025-04-25'
+  schedule:
+    - open: '09:00'
+      close: '19:00'
+  reason: 'Osterferien'
+
+    # Single day exceptions
+- type: single_day
+  date: '2025-04-26'
+  schedule:
+    - open: '09:00'
+      close: '18:00'
+  reason: 'Osterferien'
+
+    # Single day exceptions
+- type: single_day
+  date: '2025-04-27'
+  schedule:
+    - open: '09:00'
+      close: '18:00'
+  reason: 'Osterferien'
+
+    # Single day exceptions
+- type: single_day
+  date: '2025-04-28'
+  schedule:
+    - open: '10:00'
+      close: '19:00'
+  reason: 'Osterferien'
+
+    # Single day exceptions
+- type: single_day
+  date: '2025-04-29'
+  schedule:
+    - open: '09:00'
+      close: '20:00'
+  reason: 'Osterferien'
+
+    # Single day exceptions
+- type: single_day
+  date: '2025-04-30'
+  schedule:
+    - open: '09:00'
+      close: '19:00'
+  reason: 'Osterferien'
+
+    # Single day exceptions
+- type: single_day
+  date: '2025-05-01'
+  schedule:
+    - open: '09:00'
+      close: '16:00'
+  reason: 'Tag der Arbeit'
+
+      # Single day exceptions
+- type: single_day
+  date: '2025-05-02'
+  schedule:
+    - open: '09:00'
+      close: '19:00'
+  reason: 'None'
+
+      # Single day exceptions
+- type: single_day
+  date: '2025-05-03'
+  schedule:
+    - open: '09:00'
+      close: '16:00'
+  reason: 'None'
+
+      # Single day exceptions
+- type: single_day
+  date: '2025-05-04'
+  schedule:
+    - open: '09:00'
+      close: '16:00'
+  reason: 'None'
+
+# Multi-day exceptions (for closures or modified hours)
+- type: date_range
+  start_date: '2025-08-04'
+  end_date: '2025-08-17'
+  schedule: []  # Empty schedule means closed for the entire period
+  reason: 'Revisionsarbeiten'
+
+# Single day exceptions
+- type: single_day
+  date: '2025-11-15'
+  schedule:
+    - open: '09:00'
+      close: '12:00'
+  reason: 'Regionalmeisterschaft SLRG Hoengg'
+
+# Single day exceptions
+- type: single_day
+  date: '2025-05-29'
+  schedule:
+    - open: '09:00'
+      close: '16:00'
+  reason: 'Auffahrt'
+
+# Single day exceptions
+- type: single_day
+  date: '2025-06-08'
+  schedule:
+    - open: '09:00'
+      close: '16:00'
+  reason: 'Pfingstsonntag'
+
+  # Single day exceptions
+- type: single_day
+  date: '2025-06-09'
+  schedule:
+    - open: '09:00'
+      close: '16:00'
+  reason: 'Pfingstmontag'
+
+# Single day exceptions
+# - type: single_day
+#   date: '2025-04-12'
+#   schedule:
+#     - open: '13:00'
+#       close: '20:00'
+#   reason: 'XYZ'
+
+# Multi-day exceptions (for closures or modified hours)
+# - type: date_range
+#   start_date: '2025-05-01'
+#   end_date: '2025-05-07'
+#   schedule: []  # Empty schedule means closed for the entire period
+#   reason: 'XYZ'
+
+# Another example - modified hours for a conference week
+# - type: date_range
+#   start_date: '2025-06-15'
+#   end_date: '2025-06-19'
+#   schedule:
+#     - open: '09:00'
+#       close: '16:00'
+#   reason: 'XYZ'
+
+# Single day with split hours
+# - type: single_day
+#   date: '2025-04-20'
+#   schedule:
+#     - open: '06:00'
+#       close: '10:00'
+#     - open: '14:00'
+#       close: '20:00'
+#   reason: 'XYZ'
