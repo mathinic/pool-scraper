@@ -1,0 +1,40 @@
+# Multi-day exceptions (for closures or modified hours)
+- type: date_range
+  start_date: '2025-08-03'
+  end_date: '2025-08-24'
+  schedule: []  # Empty schedule means closed for the entire period
+  reason: 'Revisionsarbeiten'
+
+# Single day exceptions
+# - type: single_day
+#   date: '2025-04-12'
+#   schedule:
+#     - open: '13:00'
+#       close: '20:00'
+#   reason: 'XYZ'
+
+# Multi-day exceptions (for closures or modified hours)
+# - type: date_range
+#   start_date: '2025-05-01'
+#   end_date: '2025-05-07'
+#   schedule: []  # Empty schedule means closed for the entire period
+#   reason: 'XYZ'
+
+# Another example - modified hours for a conference week
+# - type: date_range
+#   start_date: '2025-06-15'
+#   end_date: '2025-06-19'
+#   schedule:
+#     - open: '09:00'
+#       close: '16:00'
+#   reason: 'XYZ'
+
+# Single day with split hours
+# - type: single_day
+#   date: '2025-04-20'
+#   schedule:
+#     - open: '06:00'
+#       close: '10:00'
+#     - open: '14:00'
+#       close: '20:00'
+#   reason: 'XYZ'

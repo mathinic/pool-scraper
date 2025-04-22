@@ -8,4 +8,4 @@ dependencies:
   - websockets
   - matplotlib
   - pandas
-prefix: /home/nimath/miniconda3/envs/pool-scraper
+  - pyyaml
