@@ -9,7 +9,7 @@
   date: '2025-05-06'
   schedule:
     - open: '6:00'
-      close: '13:45'
+      close: '13:20'
   reason: 'Betriebsstoerung'
 
 - type: date_range
