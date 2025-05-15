@@ -170,6 +170,57 @@ def generate_visualization(pool_name):
         except Exception as e:
             logging.warning(f"Could not add closed period shading for {pool_name}: {e}")
 
+        if pool_name == "Hallenbad Oerlikon":
+            ax = plt.gca()
+            
+            # Get x-axis limits in date format
+            latest_time = datetime.now()
+            earliest_time = latest_time - timedelta(days=7)
+            x_min = mdates.date2num(earliest_time)
+            x_max = mdates.date2num(latest_time)
+            x_width = x_max - x_min
+            
+            # Add very faint green shading for low occupancy (0-80)
+            rect_low = Rectangle(
+                (x_min, 0),  # bottom left point
+                x_width,     # full width of the plot
+                80,          # height up to 80
+                facecolor='green',
+                alpha=0.04,   # very faint
+                edgecolor='none',
+                zorder=0.5   # above closed periods but below data points
+            )
+            ax.add_patch(rect_low)
+            
+            # Add very faint yellow shading for medium occupancy (80-120)
+            rect_medium = Rectangle(
+                (x_min, 80),  # bottom left point
+                x_width,      # full width
+                40,           # height from 80 to 120
+                facecolor='yellow',
+                alpha=0.04,    # very faint
+                edgecolor='none',
+                zorder=0.5
+            )
+            ax.add_patch(rect_medium)
+            
+            # Add very faint red shading for high occupancy (120+)
+            rect_high = Rectangle(
+                (x_min, 120),  # bottom left point
+                x_width,       # full width
+                1000000,       # very tall to cover all higher values
+                facecolor='red',
+                alpha=0.06,     # very faint
+                edgecolor='none',
+                zorder=0.5
+            )
+            ax.add_patch(rect_high)
+            
+            # Add legend entries for occupancy levels
+            plt.plot([], [], color='green', alpha=0.3, linewidth=10, label='Low occupancy (< 80)')
+            plt.plot([], [], color='yellow', alpha=0.3, linewidth=10, label='Medium occupancy (80-120)')
+            plt.plot([], [], color='red', alpha=0.3, linewidth=10, label='High occupancy (> 120)')
+    
         # Plot the guest count data
         plt.plot(filtered_df['Timestamp'],
                  filtered_df['Number of Guests'],
@@ -204,8 +255,13 @@ def generate_visualization(pool_name):
         plt.grid(True, alpha=0.3)
 
         # Add legend for closed periods
-        plt.plot([], [], color='lightgray', alpha=0.5, linewidth=10, label='Pool closed for public')
-        plt.legend(loc='upper right')
+        if pool_name == "Hallenbad Oerlikon":
+            plt.plot([], [], color='lightgray', alpha=0.5, linewidth=10, label='Pool closed for public')
+            plt.legend(loc='upper right')
+        else:
+            # Original legend for other pools
+            plt.plot([], [], color='lightgray', alpha=0.5, linewidth=10, label='Pool closed for public')
+            plt.legend(loc='upper right')
 
         # Tight layout to ensure everything fits
         plt.tight_layout()
