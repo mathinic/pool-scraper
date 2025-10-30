@@ -38,6 +38,31 @@
       close: '20:00'
   reason: 'Counter issues'
 
+- type: single_day
+  date: '2025-11-16'
+  schedule:
+    - open: '6:00'
+      close: '15:00'
+    - open: '19:30'
+      close: '22:00'
+  reason: 'Wasserballklub'
+
+- type: single_day
+  date: '2025-11-22'
+  schedule:
+    - open: '06:00'
+      close: '16:00'
+  reason: 'Limmat Sharks'
+
+# Single day with split hours
+# - type: single_day
+#   date: '2025-04-20'
+#   schedule:
+#     - open: '06:00'
+#       close: '10:00'
+#     - open: '14:00'
+#       close: '20:00'
+#   reason: 'XYZ'
 # Single day exceptions
 # - type: single_day
 #   date: '2025-04-12'
