@@ -18,7 +18,25 @@
   schedule: []  # Empty schedule means closed for the entire period
   reason: 'Betriebsstoerung'
 
+- type: date_range
+  start_date: '2025-10-23'
+  end_date: '2025-10-29'
+  schedule: []  # Empty schedule means closed for the entire period
+  reason: 'Counter issues'
 
+- type: single_day
+  date: '2025-10-22'
+  schedule:
+    - open: '6:00'
+      close: '10:57'
+  reason: 'Counter issues'
+
+- type: single_day
+  date: '2025-10-30'
+  schedule:
+    - open: '11:45'
+      close: '20:00'
+  reason: 'Counter issues'
 
 # Single day exceptions
 # - type: single_day
