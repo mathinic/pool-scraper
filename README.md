@@ -1,6 +1,6 @@
 # Pool Guest Count Scraper
 
-This project scrapes the number of current guests at three swimming pools in Zurich ([Oerlikon](https://www.stadt-zuerich.ch/de/stadtleben/sport-und-erholung/sport-und-badeanlagen/hallenbaeder/oerlikon.html), [City](https://www.stadt-zuerich.ch/de/stadtleben/sport-und-erholung/sport-und-badeanlagen/hallenbaeder/city.html), and) from the [official website](https://www.stadt-zuerich.ch/de/stadtleben/sport-und-erholung/sport-und-badeanlagen/hallenbaeder.html), records the data in CSV files with timestamps and visualizes the past 7 days in the figures below.
+This project scrapes the number of current guests at two swimming pools in Zurich ([Oerlikon](https://www.stadt-zuerich.ch/de/stadtleben/sport-und-erholung/sport-und-badeanlagen/hallenbaeder/oerlikon.html), [City](https://www.stadt-zuerich.ch/de/stadtleben/sport-und-erholung/sport-und-badeanlagen/hallenbaeder/city.html)) from the [official website](https://www.stadt-zuerich.ch/de/stadtleben/sport-und-erholung/sport-und-badeanlagen/hallenbaeder.html), records the data in CSV files with timestamps and visualizes the past 7 days in the figures below.
 
 ## Pool Usage Tracking
 
