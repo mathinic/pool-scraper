@@ -4,7 +4,8 @@ import json
 import csv
 import os
 import time
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 import logging
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -63,7 +64,7 @@ async def scrape_guest_counts_async():
                                 results[pool_name] = count
 
                                 # Get current timestamp
-                                zurich_tz = timezone(timedelta(hours=2))  # CET/CEST is UTC+2
+                                zurich_tz = ZoneInfo("Europe/Zurich")
 
                                 timestamp = datetime.now(zurich_tz).strftime('%Y-%m-%d %H:%M:%S')
 
@@ -172,14 +173,14 @@ def generate_visualization(pool_name):
 
         if pool_name == "Hallenbad Oerlikon":
             ax = plt.gca()
-            
+
             # Get x-axis limits in date format
             latest_time = datetime.now()
             earliest_time = latest_time - timedelta(days=7)
             x_min = mdates.date2num(earliest_time)
             x_max = mdates.date2num(latest_time)
             x_width = x_max - x_min
-            
+
             # Add very faint green shading for low occupancy (0-80)
             rect_low = Rectangle(
                 (x_min, 0),  # bottom left point
@@ -191,7 +192,7 @@ def generate_visualization(pool_name):
                 zorder=0.5   # above closed periods but below data points
             )
             ax.add_patch(rect_low)
-            
+
             # Add very faint yellow shading for medium occupancy (80-120)
             rect_medium = Rectangle(
                 (x_min, 80),  # bottom left point
@@ -203,7 +204,7 @@ def generate_visualization(pool_name):
                 zorder=0.5
             )
             ax.add_patch(rect_medium)
-            
+
             # Add very faint red shading for high occupancy (120+)
             rect_high = Rectangle(
                 (x_min, 120),  # bottom left point
@@ -215,12 +216,12 @@ def generate_visualization(pool_name):
                 zorder=0.5
             )
             ax.add_patch(rect_high)
-            
+
             # Add legend entries for occupancy levels
             plt.plot([], [], color='green', alpha=0.3, linewidth=10, label='Low occupancy (< 80)')
             plt.plot([], [], color='yellow', alpha=0.3, linewidth=10, label='Medium occupancy (80-120)')
             plt.plot([], [], color='red', alpha=0.3, linewidth=10, label='High occupancy (> 120)')
-    
+
         # Plot the guest count data
         plt.plot(filtered_df['Timestamp'],
                  filtered_df['Number of Guests'],
