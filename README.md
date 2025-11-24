@@ -1,6 +1,6 @@
 # Pool Guest Count Scraper
 
-This project scrapes the number of current guests at three swimming pools in Zurich ([Oerlikon](https://www.stadt-zuerich.ch/de/stadtleben/sport-und-erholung/sport-und-badeanlagen/hallenbaeder/oerlikon.html), [City](https://www.stadt-zuerich.ch/de/stadtleben/sport-und-erholung/sport-und-badeanlagen/hallenbaeder/city.html), and [Bläsi](https://www.stadt-zuerich.ch/de/stadtleben/sport-und-erholung/sport-und-badeanlagen/hallenbaeder/blaesi.html)) from the [official website](https://www.stadt-zuerich.ch/de/stadtleben/sport-und-erholung/sport-und-badeanlagen/hallenbaeder.html), records the data in CSV files with timestamps and visualizes the past 7 days in the figures below.
+This project scrapes the number of current guests at three swimming pools in Zurich ([Oerlikon](https://www.stadt-zuerich.ch/de/stadtleben/sport-und-erholung/sport-und-badeanlagen/hallenbaeder/oerlikon.html), [City](https://www.stadt-zuerich.ch/de/stadtleben/sport-und-erholung/sport-und-badeanlagen/hallenbaeder/city.html), and) from the [official website](https://www.stadt-zuerich.ch/de/stadtleben/sport-und-erholung/sport-und-badeanlagen/hallenbaeder.html), records the data in CSV files with timestamps and visualizes the past 7 days in the figures below.
 
 ## Pool Usage Tracking
 
@@ -10,8 +10,6 @@ This project scrapes the number of current guests at three swimming pools in Zur
 ### [Hallenbad City](https://www.stadt-zuerich.ch/de/stadtleben/sport-und-erholung/sport-und-badeanlagen/hallenbaeder/city.html)
 ![Hallenbad City Guest Count](data/hallenbad_city_visualization.png)
 
-### [Hallenbad Bläsi](https://www.stadt-zuerich.ch/de/stadtleben/sport-und-erholung/sport-und-badeanlagen/hallenbaeder/blaesi.html)
-![Hallenbad Bläsi Guest Count](data/hallenbad_blaesi_visualization.png)
 
 The charts above show the number of guests at each pool over the past 7 days. Data is updated every ~10-30 minutes.
 
