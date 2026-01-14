@@ -54,6 +54,46 @@
       close: '16:00'
   reason: 'Limmat Sharks'
 
+- type: date_range
+  start_date: '2026-01-31'
+  end_date: '2026-02-01'
+  schedule: []  # Empty schedule means closed for the entire period
+  reason: 'Limmat Sharks'
+
+- type: single_day
+  date: '2026-02-21'
+  schedule:
+    - open: '06:00'
+      close: '17:00'
+  reason: 'Kanupolo-Turnier'
+
+- type: single_day
+  date: '2026-03-07'
+  schedule:
+    - open: '08:00'
+      close: '22:00'
+  reason: 'Kanupolo-Turnier'
+
+- type: single_day
+  date: '2026-03-08'
+  schedule:
+    - open: '06:00'
+      close: '17:00'
+  reason: 'Kanupolo-Turnier'
+
+- type: date_range
+  start_date: '2026-03-21'
+  end_date: '2026-03-22'
+  schedule: []  # Empty schedule means closed for the entire period
+  reason: 'Limmat Sharks'
+
+- type: single_day
+  date: '2026-04-11'
+  schedule:
+    - open: '07:00'
+      close: '18:00'
+  reason: 'De schnällscht Zürifisch'
+
 # Single day with split hours
 # - type: single_day
 #   date: '2025-04-20'
