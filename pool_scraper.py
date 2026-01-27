@@ -144,6 +144,13 @@ def generate_visualization(pool_name):
         # Create the plot
         plt.figure(figsize=(12, 6))
 
+        # Dynamically set y-axis limits based on data
+        min_val = filtered_df['Number of Guests'].min()
+        max_val = filtered_df['Number of Guests'].max()
+        lower_limit = max(0, min_val - 2)  # Don't go below 0
+        upper_limit = max_val + 2
+        plt.ylim(lower_limit, upper_limit)
+
         # Get closed periods for shading
         start_date = filtered_df['Timestamp'].min().date()
         end_date = filtered_df['Timestamp'].max().date()
@@ -239,13 +246,6 @@ def generate_visualization(pool_name):
         # Set y-axis to only show integers (no half-guests)
         ax = plt.gca()
         ax.yaxis.set_major_locator(plt.MaxNLocator(integer=True))
-
-        # Dynamically set y-axis limits based on data
-        min_val = filtered_df['Number of Guests'].min()
-        max_val = filtered_df['Number of Guests'].max()
-        lower_limit = max(0, min_val - 2)  # Don't go below 0
-        upper_limit = max_val + 2
-        plt.ylim(lower_limit, upper_limit)
 
         # Set fixed 7-day time range for x-axis
         latest_time = datetime.now()
