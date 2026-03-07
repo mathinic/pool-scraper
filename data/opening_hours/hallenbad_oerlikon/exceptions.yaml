@@ -70,15 +70,15 @@
 - type: single_day
   date: '2026-03-07'
   schedule:
-    - open: '08:00'
-      close: '22:00'
+    - open: '06:00'
+      close: '08:00'
   reason: 'Kanupolo-Turnier'
 
 - type: single_day
   date: '2026-03-08'
   schedule:
-    - open: '06:00'
-      close: '17:00'
+    - open: '17:00'
+      close: '22:00'
   reason: 'Kanupolo-Turnier'
 
 - type: date_range
